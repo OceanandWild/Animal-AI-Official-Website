@@ -1,0 +1,1024 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #0D6EFD;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+}
+
+.subscribe-btn {
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #e0a800;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.novedades, .personalizacion, .suscripcion {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.novedades-container, .personalizacion-contenedor {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.novedad-item, .personalizacion-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 45%;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.novedad-item h3, .personalizacion-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #0D6EFD;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+footer {
+    background-color: #0D6EFD;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+/* General Section Styling */
+.novedades {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #e3f2fd, #90caf9);
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.novedades:hover {
+    transform: scale(1.02);
+}
+
+/* Title */
+.novedades h2 {
+    font-size: 2.5rem;
+    color: #0d47a1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container Styling */
+.novedades-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual News Items */
+.novedad-item {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+    text-align: left;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+}
+
+.novedad-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styles */
+.novedad-icon {
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    background: #64b5f6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.novedad-item:hover .novedad-icon {
+    transform: rotate(20deg);
+}
+
+.icono-novedad {
+    width: 60%;
+    height: auto;
+}
+
+/* Titles and Text */
+.novedad-item h3 {
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.novedad-item p {
+    font-size: 1.1rem;
+    color: #424242;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Links */
+.novedad-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #1e88e5;
+    color: #fff;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.novedad-link:hover {
+    background-color: #1565c0;
+}
+
+/* Header Styling */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://media.discordapp.net/attachments/1279989465993056288/1280206104625942558/Animal_AI_Meg_2_La_Fosa.png?ex=66f43d58&is=66f2ebd8&hm=e593801d1aa0cf0d4e583df73ef9473ae99be7765bde0d1eec4df9f686184fe9&=&format=webp&quality=lossless&width=350&height=350');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+    box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+    z-index: -1;
+}
+
+/* Header Content Styling */
+.header-content {
+    max-width: 700px;
+    z-index: 2;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title Styling */
+.hero-section h1 {
+    font-size: 4rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #fbc02d, #ffeb3b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: textGlow 3s infinite alternate;
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 235, 59, 0.7), 0 0 20px rgba(255, 235, 59, 0.5);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 235, 59, 1);
+    }
+}
+
+/* Paragraph Styling */
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    animation: slideIn 2s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Subscribe Button Styling */
+.subscribe-btn {
+    font-size: 1.3rem;
+    padding: 15px 40px;
+    background-color: #fbc02d;
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(251, 192, 45, 0.3);
+    font-family: 'Poppins', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribe-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(251, 192, 45, 0.6);
+}
+
+/* Rocket Icon Animation in Button */
+.subscribe-btn::before {
+    content: "🚀";
+    font-size: 1.5rem;
+    margin-right: 10px;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .subscribe-btn {
+        font-size: 1.1rem;
+        padding: 10px 30px;
+    }
+}
+
+/* Personalización Section */
+.personalizacion {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#personalizacion-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#personalizacion-title::before {
+    content: '🔧';
+    position: absolute;
+    left: -40px;
+    font-size: 2rem;
+    color: #fbc02d;
+    animation: spinIcon 3s infinite linear;
+}
+
+@keyframes spinIcon {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Personalización Container */
+.personalizacion-contenedor {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Personalización Item */
+.personalizacion-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.personalizacion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.personalizacion-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.personalizacion-item h3::before {
+    content: '';
+    margin-right: 10px;
+}
+
+/* Switch Styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #fbc02d;
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+/* Language Selector and Flags */
+.language-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#language-select {
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#language-select:hover {
+    border-color: #fbc02d;
+}
+
+/* Flag Icon */
+.flag-container {
+    width: 40px;
+    height: 40px;
+}
+
+#flag-icon {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#flag-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .personalizacion-contenedor {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .personalizacion-item {
+        max-width: 100%;
+    }
+}
+
+/* Estilos base del modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    animation: modalFadeIn 0.6s forwards;
+}
+
+/* Animación de apertura del modal */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+/* Botón de cerrar */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+/* Botón de enviar */
+.submit-btn {
+    padding: 12px 20px;
+    background-color: #56ab2f; /* Verde brillante */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn:hover {
+    background-color: #6bbf4b;
+    transform: scale(1.05);
+}
+
+/* Animación del cohete */
+@keyframes rocketLaunch {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-200%);
+    }
+}
+
+/* Transformación del botón a círculo */
+@keyframes buttonShrink {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+}
+
+/* Animación del icono de confirmación */
+@keyframes confirmIconAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.submit-btn .rocket {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    font-size: 24px;
+    animation: rocketLaunch 1.2s ease-in-out forwards;
+}
+
+/* Botón transformado a círculo */
+.submit-btn.success {
+    background-color: #56ab2f;
+    animation: buttonShrink 0.5s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Icono de confirmación */
+.submit-btn.success::before {
+    content: '✅';
+    font-size: 24px;
+    opacity: 0;
+    animation: confirmIconAppear 0.5s 0.7s forwards;
+}
+
+/* Estilo base del footer */
+footer {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    opacity: 0;
+    animation: fadeInFooter 1.5s ease-in-out forwards; /* Animación de entrada */
+}
+
+/* Animación de entrada suave */
+@keyframes fadeInFooter {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Comienza más abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Vuelve a su posición original */
+    }
+}
+
+/* Estilo del texto del footer */
+#footer-text {
+    font-size: 14px;
+    color: #aaa;
+    margin: 0;
+    animation: pulseFooterText 3s infinite; /* Animación de parpadeo */
+}
+
+/* Animación de pulso para el texto del footer */
+@keyframes pulseFooterText {
+    0%, 100% {
+        color: #aaa;
+        transform: scale(1);
+    }
+    50% {
+        color: #fff;
+        transform: scale(1.05); /* Agranda el texto ligeramente */
+    }
+}
+
+/* Estilo del formulario */
+#beta-form {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Animación para el botón al registrarse */
+.shrink-button {
+    animation: shrink 1s forwards;
+}
+
+@keyframes shrink {
+    0% {
+        width: auto;
+        padding: 15px 30px;
+    }
+    100% {
+        width: 40px;
+        padding: 15px 0;
+        background-color: #4CAF50;
+    }
+}
+
+/* Animación del icono de check */
+.checkmark-icon {
+    opacity: 0;
+    font-size: 30px;
+    color: white;
+    animation: checkAppear 1s forwards;
+}
+
+@keyframes checkAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.submit-btn-beta {
+    background-color: #ff6600; /* Color de fondo vibrante */
+    background-image: linear-gradient(135deg, #ff6600, #ff9933); /* Degradado */
+    color: white; /* Color del texto */
+    border: none; /* Sin bordes */
+    padding: 15px 40px; /* Espaciado interno amplio */
+    font-size: 20px; /* Texto grande */
+    font-weight: bold; /* Negrita */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    border-radius: 50px; /* Botón con bordes redondeados */
+    cursor: pointer; /* Cursor pointer */
+    transition: all 0.5s ease; /* Transición suave */
+    position: relative; /* Para efectos internos */
+    overflow: hidden; /* Ocultar cualquier desbordamiento */
+    z-index: 1; /* Asegurar que el contenido esté sobre cualquier efecto */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra del texto */
+}
+
+.submit-btn-beta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 70%);
+    transition: transform 0.75s ease;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.submit-btn-beta:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.submit-btn-beta:hover {
+    background-image: linear-gradient(135deg, #ff9933, #ffcc00); /* Cambia de color en hover */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5); /* Sombra más fuerte en hover */
+    letter-spacing: 2px; /* Aumenta el espaciado de letras */
+}
+
+.submit-btn-beta:active {
+    transform: translateY(2px); /* Mueve el botón ligeramente hacia abajo al hacer clic */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4); /* Reduce la sombra al hacer clic */
+}
+
+/* Animación de partículas cuando se hace hover */
+.submit-btn-beta::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://i.pinimg.com/564x/e6/0c/98/e60c98e0ae9f2a905c0c5f117504d159.jpg') repeat; /* Partículas personalizadas */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.submit-btn-beta:hover::after {
+    opacity: 0.3; /* Aparecen partículas al hacer hover */
+}
+
+.submit-btn-beta span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn-beta:hover span {
+    transform: scale(1.1) rotate(5deg); /* Aumenta y rota el cohete en hover */
+}
+
+.submit-btn-beta:active span {
+    transform: scale(0.95); /* Reduce el cohete al hacer clic */
+}
+
+/* Efecto de movimiento dinámico */
+.submit-btn-beta::before,
+.submit-btn-beta::after {
+    animation: move 3s infinite linear;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Parte superior del formulario (antes del corte) */
+.form-cut-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    z-index: 10;
+    border-bottom: 1px solid #ddd; /* Línea del corte */
+    transition: transform 0.8s ease;
+}
+
+/* Parte inferior del formulario (antes del corte) */
+.form-cut-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    z-index: 10;
+    transition: transform 0.8s ease;
+}
+
+/* Cuando se aplica la animación de corte */
+.form-cut-animate .form-cut-top {
+    transform: translateY(-100%); /* Mueve la parte superior hacia arriba */
+}
+
+.form-cut-animate .form-cut-bottom {
+    transform: translateY(100%); /* Mueve la parte inferior hacia abajo */
+}
+
+/* Opcional: Se puede añadir una clase para desaparecer el formulario tras el corte */
+.hidden {
+    display: none;
+}
+
+.shrink-button {
+    animation: shrink 0.8s forwards; /* Encogimiento suave */
+}
+
+@keyframes shrink {
+    from {
+        width: 100%;
+        height: 50px;
+        opacity: 1;
+    }
+    to {
+        width: 200px; /* El botón se encoge lo suficiente para mostrar el mensaje */
+        height: 40px;
+        opacity: 1;
+    }
+}
+
+button.hidden {
+    display: none; /* Para ocultar el botón temporalmente */
+}
+
+.launch-global-date-btn {
+    font-family: 'Poppins', sans-serif; /* Elegante fuente moderna */
+    color: #FFD700; /* Dorado brillante */
+    background: linear-gradient(45deg, #6A0572, #FF6F61, #FFD700); /* Gradiente vibrante */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards, textGlow 1.5s ease-in-out infinite alternate; /* Animaciones */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FF6F61, 0 0 30px #6A0572;
+    }
+    100% {
+        text-shadow: 0 0 20px #FFD700, 0 0 30px #FF6F61, 0 0 40px #6A0572;
+    }
+}
+
+/* Animación de brillo alrededor del borde */
+.launch-global-date-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 223, 0, 0.7), transparent);
+    animation: shine 4s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+/* Brillo en el texto */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FF6F61, 0 0 30px #6A0572;
+    }
+    to {
+        text-shadow: 0 0 20px #FFD700, 0 0 30px #FF6F61, 0 0 40px #6A0572;
+    }
+}

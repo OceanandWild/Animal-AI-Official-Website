@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal AI - Página Oficial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero-section">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1 id="welcome-title">🐾 Bienvenido a Animal AI 🐾</h1>
+            <p id="welcome-text">Explora la inteligencia de los animales con nuestra tecnología avanzada</p>
+            <button class="subscribe-btn" id="subscribe-btn-header">Prueba su Beta Ahora</button>
+            <h2 id="launch-global-date" class="launch-global-date-btn" style="display: none;">Animal AI ESTARA DISPONIBLE A PARTIR DE ESTE 12 DE OCTUBRE</h2>
+    
+            <!-- Formulario oculto inicialmente -->
+            <form id="beta-form" class="form-style" style="display: none;">
+                <div class="input-group">
+                    <label for="name">👤 Nombre:</label>
+                    <input type="text" id="name-beta" name="name-beta" placeholder="Tu nombre completo" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">✉️ Correo Electrónico:</label>
+                    <input type="email" id="email-beta" name="email-beta" placeholder="Tu correo electrónico" required>
+                </div>
+                <button type="submit" class="submit-btn-beta">🚀 Registrarse en la Beta</button>
+            </form>
+        </div>
+    </header>
+    
+
+    <main>
+        <section class="novedades">
+            <h2 id="novedades-title">✨ Últimas Novedades ✨</h2>
+            <div class="novedades-container">
+                <!-- Rediseño y Mejora de la Lista de Comandos -->
+        <div class="novedad-item lista-comandos">
+            <div class="novedad-icon">
+            </div>
+            <h3 id="comandos-title">🔄 Rediseño y Mejora de la Lista de Comandos</h3>
+            <p id="comandos-text">Hemos rediseñado y mejorado la lista de comandos disponibles para ofrecerte una experiencia más intuitiva. Ahora podrás navegar por los comandos de manera más rápida y eficiente.</p>
+            <a href="#comandos-detalles" class="novedad-link">Descubre cómo funciona</a>
+        </div>
+
+        <!-- Nuevos Estados de Comandos -->
+        <div class="novedad-item estados-comandos">
+            <div class="novedad-icon">
+            </div>
+            <h3 id="estados-title">🎨 Nuevos Estados de Comandos</h3>
+            <p id="estados-text">Los comandos ahora cuentan con una gama de nuevos estados, cada uno con su propio color, ícono y efectos especiales para ayudarte a identificar el estado actual de los comandos activos o en proceso.</p>
+            <a href="#estados-detalles" class="novedad-link">Ver Estados</a>
+        </div>
+
+        <!-- Comando en Verificación Final (/lineas) -->
+        <div class="novedad-item verificacion-comando">
+            <div class="novedad-icon">
+            </div>
+            <h3 id="verificacion-title">📝 Comando en Verificación Final (/lineas)</h3>
+            <p id="verificacion-text">El comando <code>/lineas</code> se encuentra en la fase final de verificación. Muy pronto estará disponible para todos, permitiendo una nueva funcionalidad en la plataforma. ¡Mantente atento para probarlo!</p>
+            <a href="#lineas-detalles" class="novedad-link">Detalles del Comando</a>
+        </div>
+
+        <!-- Efectos Especiales para Estados -->
+        <div class="novedad-item efectos-estados">
+            <div class="novedad-icon">
+            </div>
+            <h3 id="efectos-title">✨ Efectos Especiales para los Estados</h3>
+            <p id="efectos-text">Los estados de los comandos ahora incluyen efectos visuales especiales, como transiciones suaves y destellos para los cambios importantes. Estos detalles mejoran la claridad y la experiencia visual de la plataforma.</p>
+            <a href="#efectos-detalles" class="novedad-link">Ver Efectos en Acción</a>
+        </div>
+
+        <!-- Hovers en Lista de Comandos -->
+        <div class="novedad-item hovers-comandos">
+            <div class="novedad-icon">
+            </div>
+            <h3 id="hover-title">🖱️ Efectos Hover en la Lista de Comandos</h3>
+            <p id="hover-text">Hemos implementado efectos de hover en la lista de comandos, lo que proporciona una interacción más atractiva. Ahora al pasar el ratón sobre un comando, verás un resaltado dinámico que mejora la navegación.</p>
+            <a href="#hover-detalles" class="novedad-link">Explorar Hovers</a>
+        </div>
+
+        <!-- Buscador de Comandos Próximamente -->
+        <div class="novedad-item buscador-comandos">
+            <div class="novedad-icon">
+            </div>
+            <h3 id="buscador-title">🔍 Próximamente: Buscador de Comandos</h3>
+            <p id="buscador-text">Estamos trabajando en un buscador avanzado de comandos que te permitirá encontrar fácilmente cualquier comando con solo escribir su nombre o función. ¡Pronto disponible para todos!</p>
+            <a href="#buscador-detalles" class="novedad-link">Mantente Informado</a>
+        </div>
+    </div>
+        </section>
+        
+
+        <section class="personalizacion">
+            <h2 id="personalizacion-title">⚙️ Personalización</h2>
+            <div class="personalizacion-contenedor">
+                <div class="personalizacion-item">
+                    <h3 id="tema-title">🌗 Tema Oscuro/Claro</h3>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="personalizacion-item">
+                    <h3 id="idioma-title">🌍 Idioma</h3>
+                    <div class="language-container">
+                        <select id="language-select">
+                            <option value="es">Español</option>
+                            <option value="en">Inglés</option>
+                            <option value="fr">Francés</option>
+                            <option value="ru">Ruso</option>
+                            <option value="ja">Japonés</option>
+                            <option value="zh">Chino</option>
+                            <option value="ko">Coreano</option>
+                            <option value="pt">Portugués</option>
+                            <option value="vi">Vietnamita</option>
+                        </select>
+                        <div class="flag-container">
+                            <img src="https://as1.ftcdn.net/v2/jpg/00/20/62/26/1000_F_20622690_7Ys6Jgwoxrn174fbEJU1q8lbneLd9zL6.jpg" alt="Español" id="flag-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="suscripcion">
+            <h2 id="suscripcion-title">Suscripción Premium</h2>
+            <p id="suscripcion-text">Obtén acceso exclusivo a nuevas funciones y contenido sobre inteligencia animal.</p>
+            <button class="subscribe-btn" id="subscribe-btn-main">Suscríbete Ahora</button>
+        </section>
+    </main>
+
+<!-- Modal para la suscripción -->
+<div id="modal-suscripcion" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 class="modal-title">🌟 Suscripción Premium 🌟</h2>
+        <p class="modal-description">Únete a nuestra comunidad exclusiva para descubrir contenido asombroso sobre inteligencia animal.</p>
+        <form id="subscription-form" class="form-style">
+            <div class="input-group">
+                <label for="name">👤 Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">✉️ Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+            </div>
+
+            <button type="submit" class="submit-btn">🚀 Confirmar Suscripción</button>
+        </form>
+        <p class="confirmation-message" id="confirmation-message" style="display: none;">¡🎉 Gracias por suscribirte! Pronto recibirás contenido exclusivo.</p>
+    </div>
+</div>
+
+
+    <footer>
+        <p id="footer-text">&copy; 2024 Animal AI. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
