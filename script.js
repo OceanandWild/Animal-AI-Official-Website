@@ -27,6 +27,35 @@ const changeText = () => {
     isFirstText = !isFirstText; // Alterna el estado
 };
 
+// Lista de países donde Animal AI BETA está disponible
+const availableCountries = ["United States", "Canada", "Spain", "Brazil"];
+
+// Simulación de un mapa interactivo usando el SVG del mapa del mundo
+document.querySelectorAll('.country').forEach(country => {
+    const countryName = country.getAttribute('data-name'); // Suponiendo que los países tienen un data-name con el nombre
+
+    // Colorear en verde los países disponibles
+    if (availableCountries.includes(countryName)) {
+        country.classList.add('available');
+    }
+
+    // Añadir un tooltip para los países
+    country.addEventListener('mouseover', () => {
+        const tooltip = document.createElement('div');
+        tooltip.className = 'tooltip';
+        tooltip.innerHTML = countryName;
+        document.body.appendChild(tooltip);
+        
+        country.addEventListener('mousemove', (e) => {
+            tooltip.style.left = e.pageX + 'px';
+            tooltip.style.top = e.pageY + 'px';
+        });
+        
+        country.addEventListener('mouseleave', () => {
+            document.body.removeChild(tooltip);
+        });
+    });
+});
 
     // Función para mostrar que la beta no está disponible
     const mostrarNoDisponible = () => {
