@@ -55,6 +55,18 @@ document.querySelectorAll('.country').forEach(country => {
             document.body.removeChild(tooltip);
         });
     });
+
+
+
+const links = document.querySelectorAll('.novedad-link');
+
+links.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+        const id = link.getAttribute('data-id');
+        mostrarDetalles(id);
+    });
+});
 });
 
     // Función para mostrar que la beta no está disponible
@@ -364,4 +376,18 @@ betaForm.addEventListener("submit", (e) => {
         mostrarNoDisponible();
     }
 });
+
+
+function mostrarDetalles(id) {
+const detalles = {
+    mejora: "Detalles sobre la mejora de visualización y experiencia del usuario: Se han realizado ajustes en la interfaz para optimizar la navegación.",
+    funciones: "Detalles sobre nuevas funciones en el sistema de comandos: Se han agregado opciones de personalización y control para los comandos.",
+    seguridad: "Detalles sobre mejoras en la seguridad del sistema: Nuevos protocolos y medidas de seguridad implementadas para proteger los datos.",
+    actualizacion: "Detalles sobre la actualización de la base de datos: Se ha mejorado la velocidad de respuesta y la eficiencia en el manejo de datos.",
+    documentacion: "Detalles sobre la mejora de la documentación: Se han incluido ejemplos más claros y explicativos.",
+    cambio: "Detalles sobre el cambio de la lista de comandos: Ahora se manejará automáticamente y podrás cambiar de página con botones."
+};
+
+alert(detalles[id]); // Muestra los detalles en una alerta (puedes personalizar esto)
+}
 });

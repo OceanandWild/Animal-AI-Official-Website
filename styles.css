@@ -157,6 +157,25 @@ footer {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Subtitles */
+.novedades h3 {
+    font-size: 1.8rem;
+    color: #1976d2;
+    margin: 15px 0;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+}
+
+/* Paragraphs */
+.novedades p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+
 /* Container Styling */
 .novedades-container {
     display: flex;
